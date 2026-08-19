@@ -1,0 +1,15 @@
+[project]
+name = "api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.110.0",
+    "neo4j>=5.18.0",
+    "pydantic>=2.6.0",
+    "python-dotenv>=1.0.1",
+    "uvicorn>=0.28.0",
+]
+[tool.vercel]
+entrypoint = "main:app"

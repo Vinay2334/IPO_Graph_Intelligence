@@ -161,3 +161,7 @@ def analyze_company(company_id: str):
                 "edges": [e for e in subgraph["edges"] if e and e["source"] and e["target"]]
             }
         }
+
+@app.get("/")
+def read_root():
+    return {"status": "ok"}
