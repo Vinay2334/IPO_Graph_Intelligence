@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #07090e;
+  --color-surface: #0e131f;
+  --color-surface-hover: #161d2f;
+  --color-panel: #121826;
+  --color-border: #1e293b;
+  --color-border-subtle: #151d2a;
+}
+
+body {
+  background-color: #07090e;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Sleek custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
