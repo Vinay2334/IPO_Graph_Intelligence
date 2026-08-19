@@ -32,9 +32,16 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="IPO Risk & Intelligence Graph Engine", lifespan=lifespan)
 
+origins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://ipo-graph-intelligence-ui.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
