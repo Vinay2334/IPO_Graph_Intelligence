@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { GraphViewer } from './components/GraphViewer';
 import { 
   Building2, 
   TrendingDown, 
   TrendingUp, 
   ShieldAlert, 
-  ExternalLink, 
   Layers, 
   Search,
   Activity,
   ArrowUpRight,
   Database,
-  Radio
 } from 'lucide-react';
 
 interface Company {
@@ -47,6 +45,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'contagion' | 'direct'>('contagion');
   const [selectedNode, setSelectedNode] = useState<any | null>(null);
 
+  console.log("VITE_API_URL:", import.meta.env.VITE_API_URL);
   const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
   useEffect(() => {
